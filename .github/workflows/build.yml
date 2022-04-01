@@ -40,7 +40,7 @@ jobs:
         run: ./copy-assets.bash _site
 
       - name: git push to gh_pages
-        run: rm .git_ignore && git add _site && git commit -m "Auto build gh-pages"
+        run: rm .gitignore && git add _site && git commit -m "Auto build gh-pages"
 
       - name: Push to gh-pages
         run: git subtree push --prefix _site origin gh-pages
