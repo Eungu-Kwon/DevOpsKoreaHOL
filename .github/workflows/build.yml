@@ -46,6 +46,6 @@ jobs:
         run: rm .gitignore && git add _site && git commit -m "Auto build gh-pages"
 
       - name: Push to gh-pages
-        run: git subtree push --prefix _site origin gh-pages --force
+        run: git push origin `git subtree split --prefix _site main`:gh-pages --force
 
       - run: echo "This job's status is ${{ job.status }}."
